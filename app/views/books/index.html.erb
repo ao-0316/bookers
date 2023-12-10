@@ -1,2 +1,66 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= stylesheet_link_tag 'index' %>
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    
+  </head>
+
+<body>
+  <header>
+    <h1 class="header">Book</h1>
+  </header>
+  
+  
+  
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= form_with model: Book.new do |f| %>
+
+
+
+<% @book.each do |list| %>
+  
+  
+<span><%= list.title %></span>
+
+<span><%= list.body %></span>
+<% end %>
+
+
+
+
+
+<h2>New book</h2>
+
+
+ <h4>Titile</h4>
+  <%= f.text_field :title %>
+
+<h4>Body</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "Create Book" %>
+
+<% end%>
