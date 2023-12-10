@@ -2,16 +2,15 @@
 <p>Find me in app/views/books/show.html.erb</p>
 
 
-<% @book.each do |list| %>
+
   <p>タイトル</p>
   
-<span><%= list.title %></span>
+<span><%= @book.title %></span>
 
-<span><%= list.body %></span>
-
-
+<span><%= @book.body %></span>
 
 
 
 
-<% end %>
+
+
